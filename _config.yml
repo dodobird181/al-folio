@@ -188,6 +188,12 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - SAM_BUILD_INSTRUCTIONS.md
+
+  # omitting pages I don't want
+  - _news/
+  - _bibliography/
+
 keep_files:
   - CNAME
   - .nojekyll
