@@ -381,8 +381,11 @@ imagemagick:
 lazy_loading_images: true # enables lazy loading of images (recommended)
 
 # -----------------------------------------------------------------------------
-# Optional Features
+# Resume
 # -----------------------------------------------------------------------------
+
+resume:
+  url: /assets/resume.pdf # Path to your resume PDF file
 
 enable_google_analytics: false # enables google analytics
 enable_cronitor_analytics: false # enables cronitor RUM analytics
