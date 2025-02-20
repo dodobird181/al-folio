@@ -3,6 +3,7 @@ layout: page
 permalink: /resume
 title: resume
 description: My resume
+link: /assets/resume.pdf
 nav: true
 ---
 
