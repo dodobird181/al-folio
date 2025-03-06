@@ -5,24 +5,24 @@
 @use "sass:color";
 
 :root {
-  --global-bg-color: #454851ff; /* charcoal */
-  --global-code-bg-color: #73956fff; /* asparagus */
-  --global-text-color: #7bae7fff; /* cambridge-blue */
-  --global-text-color-light: #95d7aeff; /* celadon */
-  --global-theme-color: #fceff9ff; /* lavender-blush */
-  --global-hover-color: #fceff9ff; /* lavender-blush */
-  --global-hover-text-color: #454851ff; /* charcoal */
-  --global-footer-bg-color: #73956fff; /* asparagus */
-  --global-footer-text-color: #95d7aeff; /* celadon */
-  --global-footer-link-color: #7bae7fff; /* cambridge-blue */
-  --global-distill-app-color: #73956fff; /* asparagus */
-  --global-divider-color: rgba(69, 72, 81, 0.1); /* charcoal with transparency */
-  --global-card-bg-color: #454851ff; /* charcoal */
-  --global-highlight-color: #7bae7fff; /* cambridge-blue */
-  --global-back-to-top-bg-color: rgba(69, 72, 81, 0.4); /* charcoal with transparency */
-  --global-back-to-top-text-color: #7bae7fff; /* cambridge-blue */
-  --global-newsletter-bg-color: #454851ff; /* charcoal */
-  --global-newsletter-text-color: #7bae7fff; /* cambridge-blue */
+  --global-bg-color: #6B6D71;
+  --global-code-bg-color: #73956fff;
+  --global-text-color: #f9d377;
+  --global-text-color-light: #95d7aeff; /* <-- Selected link color*/
+  --global-theme-color: #86CAAF;
+  --global-hover-color: #fceff9ff;
+  --global-hover-text-color: #454851ff;
+  --global-footer-bg-color: #73956fff;
+  --global-footer-text-color: #95d7aeff;
+  --global-footer-link-color: #7bae7fff;
+  --global-distill-app-color: #73956fff;
+  --global-divider-color: rgba(69, 72, 81, 0.1);
+  --global-card-bg-color: #454851ff;
+  --global-highlight-color: #7bae7fff;
+  --global-back-to-top-bg-color: rgba(69, 72, 81, 0.4);
+  --global-back-to-top-text-color: #7bae7fff;
+  --global-newsletter-bg-color: #454851ff;
+  --global-newsletter-text-color: #7bae7fff;
   --charcoal: #454851ff;
   --asparagus: #73956fff;
   --cambridge-blue: #7bae7fff;
