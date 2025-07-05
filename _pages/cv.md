@@ -1,13 +1,11 @@
 ---
-layout: page
-title: resume
+layout: cv
+permalink: /cv/
+title: cv
 nav: true
-permalink: /resume
+nav_order: 5
+cv_pdf: example_pdf.pdf # you can also use external links here
+description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+toc:
+  sidebar: left
 ---
-
-<div style="position: relative; width: 100%; height: 0; padding-top: 80%;">
-    <iframe 
-        src="{{ '/assets/pdf/resume.pdf' | relative_url }}" 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-    </iframe>
-</div>
