@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: From Victoria, BC, living in Montréal since 2018.
+subtitle: From Victoria, British Columbia, living in Montréal, Quebec, since 2018.
 
 profile:
-  align: left
-  image: profile_pic_toque.png
+  align: right
+  image: darbar_pic_cropped.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>dodobird181@gmail.com</p>
+    <p>Dodobird181@gmail.com</p>
     <p>Le Plateau-Mont-Royal</p>
     <p>Montréal, Québec</p>
 
@@ -27,12 +27,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<img src="../../assets/img/logo.png" width="50px"/>
 
-<canvas id="ratingChart" width="600" height="400"></canvas>
-
+<!-- <canvas id="ratingChart" width="600" height="400"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="_scripts/lichess-preview.js"></script>
+<script src="_scripts/lichess-preview.js"></script> -->
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

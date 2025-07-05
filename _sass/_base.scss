@@ -402,7 +402,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 1rem;
+    font-size: 2rem;
 
     a {
       img {
@@ -1188,7 +1188,24 @@ ninja-keys::part(ninja-input-wrapper) {
 
 // newsletter
 .newsletter-form-container {
+  width: 100%;
   margin-bottom: 20px;
+}
+
+// Desktop Footer Image
+.footer-image{
+  width: 20%;
+  min-width: 280px;
+  margin: 0 auto;
+  display: block;
+}
+// Mobile Footer Image
+@media (max-width: 570px) {
+  .footer-image{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .newsletter-form {
