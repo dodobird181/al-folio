@@ -207,8 +207,10 @@ let transTheme = () => {
 // "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
+  if (themeSetting != "dark" && themeSetting != "light") {
+    // Since im removing the system theme option, I've decided here that the default
+    // theme setting on initial page load, or browser cache reset, will be dark.
+    themeSetting = "dark";
   }
   return themeSetting;
 };
@@ -230,8 +232,8 @@ let determineComputedTheme = () => {
 };
 
 let initTheme = () => {
-  let themeSetting = determineThemeSetting();
 
+  let themeSetting = determineThemeSetting();
   setThemeSetting(themeSetting);
 
   // Add event listener to the theme toggle button.

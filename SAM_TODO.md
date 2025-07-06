@@ -8,6 +8,8 @@ High Priority:
 - [ ] Make resume info accurate, complete and correct.
 - [ ] Make resume link PDF link properly to my real resume.pdf file.
 
+LOGO offset outside the header same height as title + subtitle, and when the page gets smaller it moves to the navbar, same width / height!
+
 Low Priority:
 - [ ] Update 404 page.
 - [ ] Update LinkedIn thumbnail.
