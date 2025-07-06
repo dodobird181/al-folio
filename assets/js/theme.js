@@ -243,6 +243,7 @@ let initTheme = () => {
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
+
   });
 
   // Add event listener to the system theme preference change.
@@ -250,3 +251,14 @@ let initTheme = () => {
     applyTheme();
   });
 };
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Display high-resolution images once they're loaded
+//   const fullImage = document.querySelector('full');
+//   console.log(fullImage);
+//   fullImage.onload = () => {
+//     console.log("Full logo image loaded!");
+//     fullImage.style.opacity = 1;
+//   };
+// });

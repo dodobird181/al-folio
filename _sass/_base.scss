@@ -227,6 +227,29 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Logo on about page
+.about-logo {
+  width: 55px;
+  position: absolute;
+  margin-left: -70px;
+  margin-top: 7px;
+}
+
+.image-wrapper {
+  position: relative;
+  // overflow: hidden;
+}
+
+.preview, .full {
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.full {
+  opacity: 0;
+}
+
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
@@ -1194,8 +1217,7 @@ ninja-keys::part(ninja-input-wrapper) {
 
 // Desktop Footer Image
 .footer-image{
-  width: 20%;
-  min-width: 280px;
+  width: 280px;
   margin: 0 auto;
   display: block;
 }

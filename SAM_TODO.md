@@ -5,6 +5,7 @@ High Priority:
 - [ ] Color-scheme for both light and dark mode figured out and clean up the scheming code a little.
 - [ ] Write bio!!!
 - [ ] Replace favicon and non-homepage logos wih something that looks better.
+- [ ] Low resolution image for logo and them higher resolution image fades in once fully-loaded!
 - [ ] Make resume info accurate, complete and correct.
 - [ ] Make resume link PDF link properly to my real resume.pdf file.
 
