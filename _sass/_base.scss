@@ -227,28 +227,18 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Logo on about page
-.about-logo {
-  width: 55px;
-  position: absolute;
-  margin-left: -70px;
-  margin-top: 7px;
-}
-
-.image-wrapper {
+// Logo in header
+.header-logo {
+  width: 50px;
   position: relative;
-  // overflow: hidden;
 }
-
-.preview, .full {
-  display: block;
-  transition: opacity 0.5s ease;
+// Mobile logo size
+@media (max-width: 570px) {
+  .header-logo {
+    width: 100px;
+    position: relative;
+  }
 }
-
-.full {
-  opacity: 0;
-}
-
 
 .post-description {
   margin-bottom: 2rem;
@@ -319,6 +309,13 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  // Make nav link text bigger on mobile
+  @media (max-width: 570px) {
+    .navbar-nav .nav-item .nav-link {
+      font-size: 5rem;
+    }
+  }
+
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
@@ -370,11 +367,11 @@ ul.task-list input[type="checkbox"] {
 .navbar-toggler {
   .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 50px;
+    height: 3.5px;
     background-color: var(--global-text-color);
     border-radius: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     transition: all 0.2s;
   }
 

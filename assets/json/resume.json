@@ -1,10 +1,8 @@
 {
-  "basics": {
+  "about": {
     "name": "Samuel Jack Morris",
-    "label": "Senior C# Programmer",
     "email": "Dodobird181@gmail.com",
     "phone": "(250) 508-6292",
-    "url": "https://www.sammorris.ca",
     "summary": "Experienced software developer specializing in backend development, distributed systems, and game development. Strong background in Python, Java, C#, and JavaScript.",
     "location": {
       "city": "Montréal",
@@ -26,28 +24,29 @@
   },
   "work": [
     {
-      "name": "Emburse Inc.",
-      "position": "Level 2 Software Developer",
-      "location": "Montréal, Québec",
-      "startDate": "2022-08-01",
-      "summary": "Full-stack Python developer for the Emburse Cards Django web app.",
+      "name": "NatuR&D",
+      "position": "Lead Backend Developer",
+      "location": "Victoria, BC, (Remote)",
+      "startDate": "2024-08-01",
+      "summary": "Python & TypeScript developer at the Resilient Urban Systems and Habitat (RUSH) Initiative, responsible for developing and maintaining our backend infrastructure.",
       "highlights": [
-        "Implemented two-factor authentication to protect against fraudulent activity.",
-        "Led a certification process with Apple and Stripe.",
-        "Migrated away from 'public key' authentication in the Plaid Inc. integration.",
-        "Developed an internal tool for exporting foreign exchange fees.",
-        "Promoted from Level 1 to Level 2 software engineer."
+        "Executed high-level requirements design, project planning, and communicating technical progress with key project stakeholders.",
+        "Developed an interactive web application for uploading, previewing, styling, and reviewing GeoJSON map data that integrates our application frontend."
       ]
     },
     {
-      "name": "NatuR&D",
-      "position": "Software Developer",
-      "location": "Victoria, British Columbia",
-      "startDate": "2024-08-01",
-      "summary": "Full-stack JavaScript developer for the Resilient Urban Systems and Habitat (RUSH) Initiative.",
+      "name": "Emburse Inc.",
+      "position": "Level 2 Software Developer",
+      "location": "Montréal, Québec",
+      "startDate": "2022-08-02",
+      "endDate": "2025-05-30",
+      "summary": "Full-stack Python developer for the Emburse Cards Django web app, responsible for implementing new features, addressing technical debt, participating in on-call rotations, undertaking deployments, writing unit and integration tests, planning projects, responding to emergencies, and performing code-reviews.",
       "highlights": [
-        "Developed the backend for https://whatstherush.ca.",
-        "Contributed to the GitHub repository: https://github.com/naturnd-rush/rush-cms."
+        "Contributed over 85% of the work on an urgent security project to protect our application against fraudulent activity by using two-factor authentication and monitoring user login activity.",
+        "Led a certification process where I was the sole representative for my team in calls with Apple and Stripe that involved performing various actions on our backend at the request of a third-party tester.",
+        "Independently planned a Jira epic to migrate away from “public key” authentication in our Plaid Inc. integration.",
+        "Created an internal tool for exporting foreign exchange and cross border fees for our clients, and a cron job for charging them at the end of their pay periods.",
+        "Achieved a promotion from Level 1 to Level 2 software engineer."
       ]
     },
     {

@@ -3,12 +3,6 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
-
-    <div class="image-wrapper">
-      <img class="preview about-logo" src="../assets/img/logo_low_quality.png" alt="Logo" />
-      <img class="full about-logo" src="../assets/img/logo.png" alt="Logo" />
-    </div>
-
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -46,10 +40,10 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
+    <!-- Updates -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/updates/' | relative_url }}" style="color: inherit">Updates</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}

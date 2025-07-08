@@ -132,6 +132,12 @@ html[data-theme-setting="dark"] {
     font-size: 1.5rem;
     display: block;
   }
+  // Make light toggle bigger on mobile
+  @media (max-width: 570px) {
+    #light-toggle-dark {
+      font-size: 5rem;
+    }
+  }
 
   #light-toggle-light {
     display: none;
@@ -157,5 +163,11 @@ html[data-theme-setting="light"] {
     padding-top: 12.5px;
     font-size: 1.5rem;
     display: block;
+  }
+  // Make light toggle bigger on mobile
+  @media (max-width: 570px) {
+    #light-toggle-light {
+      font-size: 5rem;
+    }
   }
 }
