@@ -36,7 +36,7 @@ Hi, I'm Sam. I grew up in Victoria, BC, and moved to Montréal in 2018 to study 
 
 The 21st century is rife with examples of how software has simultaniously increased information transmission and convenience, while diminishing certain social and psychological aspects of our lives that make us uniquely human.
 
-I'm on a mission to understand how the current architecture of software and hardware affects our culture, community, and personal well-being. So that we can reap the benefits of communication and convenience without amplifying so many of the social, economic, and environmental pitfalls we see today.
+I'm on a mission to understand how the current architecture of software and hardware affects our culture, community, and personal well-being. So that we can enjoy the benefits of communication and convenience without amplifying so many of the social, economic, and environmental pitfalls we see today.
 
 I hope to do this by ...
 
