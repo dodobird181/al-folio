@@ -40,7 +40,7 @@
       "location": "Montréal, Québec",
       "startDate": "2022-08-02",
       "endDate": "2025-05-30",
-      "summary": "Full-stack Python developer for the Emburse Cards Django web app, responsible for implementing new features, addressing technical debt, participating in on-call rotations, undertaking deployments, writing unit and integration tests, planning projects, responding to emergencies, and performing code-reviews.",
+      "summary": "Full-stack Python developer for the Emburse Cards Django web app, responsible for implementing new features, addressing technical debt, participating in on-call rotations, performing deployments, writing unit and integration tests, planning projects, responding to emergencies, and performing code-reviews.",
       "highlights": [
         "Contributed over 85% of the work on an urgent security project to protect our application against fraudulent activity by using two-factor authentication and monitoring user login activity.",
         "Led a certification process where I was the sole representative for my team in calls with Apple and Stripe that involved performing various actions on our backend at the request of a third-party tester.",
