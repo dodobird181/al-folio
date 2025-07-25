@@ -30,8 +30,8 @@
       "startDate": "2024-08-01",
       "summary": "Python & TypeScript developer at the Resilient Urban Systems and Habitat (RUSH) Initiative, responsible for developing and maintaining our backend infrastructure.",
       "highlights": [
-        "Executed high-level requirements design, project planning, and communicating technical progress with key project stakeholders.",
-        "Developed an interactive web application for uploading, previewing, styling, and reviewing GeoJSON map data that integrates our application frontend."
+        "Performed high-level requirements design, project planning, and technical progress updates with key project stakeholders.",
+        "Developed an interactive web application for uploading, previewing, styling, and reviewing GeoJSON map data that integrates with our application frontend."
       ]
     },
     {
@@ -52,13 +52,13 @@
     {
       "name": "SKYTRAC Systems Ltd.",
       "position": "Junior Software Developer",
-      "location": "Victoria, British Columbia",
+      "location": "Victoria, BC, (Hybrid)",
       "startDate": "2021-05-01",
       "endDate": "2021-09-01",
-      "summary": "Developed a Java application for scheduling and sending customer emails.",
+      "summary": "Backend Java and C# developer responsible for migrating mission critical repositories out of a legacy mono-repo. Developed a Java application for scheduling and sending customer emails.",
       "highlights": [
-        "Built CI/CD pipelines and Dockerized applications.",
-        "Implemented unit tests to improve deployment stability."
+        "Spearheaded the development of a new Java application for scheduling, packaging, and sending emails to customers based on their account's notification settings",
+        "Created CI/CD pipelines, Docker images, and unit-tests to streamline application deployment."
       ]
     }
   ],

@@ -32,7 +32,7 @@ latest_posts:
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="_scripts/lichess-preview.js"></script> -->
 
-Hi, I'm Sam. I grew up in Victoria, BC, and moved to Montréal in 2018 to study Cognitive Science at McGill University. Right now, I work as a freelance programmer on various web development, embedded software, and experimental design projects.
+Hi, I'm Sam. I grew up in Victoria, BC, and moved to Montréal in 2018 to study Cognitive Science and Computer Science at McGill University. Right now, I work as a freelance programmer on various web development, embedded software, and experimental design projects.
 
 The 21st century is rife with examples of how software has simultaniously increased information transmission and convenience, while diminishing certain social and psychological aspects of our lives that make us uniquely human.
 
