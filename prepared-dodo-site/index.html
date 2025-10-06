@@ -209,10 +209,38 @@
                     // Force reflow to restart animation
                     void footprint.offsetWidth;
 
+                    // Add randomness to position and rotation
+                    const baseTop = 10 + (index * 30); // Increased spacing from 15px to 30px
+                    const baseLeft = 10 + (index * 30);
+
+                    // Random offset: +/- 5px for natural variation
+                    const randomTopOffset = (Math.random() - 0.5) * 10;
+                    const randomLeftOffset = (Math.random() - 0.5) * 10;
+
+                    footprint.style.top = `${baseTop + randomTopOffset}px`;
+                    footprint.style.left = `${baseLeft + randomLeftOffset}px`;
+
+                    // Add random rotation variation to base rotation
+                    const isLeft = index % 2 === 0;
+                    const baseRotation = isLeft ? 145 : 125;
+                    const randomRotation = (Math.random() - 0.5) * 20; // +/- 10 degrees
+
+                    if (isLeft) {
+                        footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(0.5)`;
+                    } else {
+                        footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(0.5)`;
+                    }
+
                     // Add animation class with delay
                     setTimeout(() => {
                         footprint.classList.add('animate');
-                    }, index * 300); // 150ms delay between each footprint
+                        // Update transform to include rotation when animating
+                        if (isLeft) {
+                            footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(1)`;
+                        } else {
+                            footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(1)`;
+                        }
+                    }, index * 300);
                 });
             });
 

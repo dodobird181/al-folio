@@ -479,10 +479,10 @@ footer {
 /* Hover Footprints */
 .footprint-container {
     position: absolute;
-    top: -60px;
-    left: -40px;
-    width: 100px;
-    height: 80px;
+    top: -100px;
+    left: -50px;
+    width: 150px;
+    height: 120px;
     pointer-events: none;
 }
 
