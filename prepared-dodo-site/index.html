@@ -10,6 +10,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Full page loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-footprints">
+            <svg class="loader-footprint loader-footprint-1" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" stroke-width="2.5" fill="currentColor" stroke-linecap="round">
+                    <!-- Center toe (longest) -->
+                    <line x1="14" y1="20" x2="14" y2="2" />
+                    <circle cx="14" cy="2" r="2.5" />
+                    <!-- Left toe -->
+                    <line x1="14" y1="20" x2="4" y2="8" />
+                    <circle cx="4" cy="8" r="2.5" />
+                    <!-- Right toe -->
+                    <line x1="14" y1="20" x2="24" y2="8" />
+                    <circle cx="24" cy="8" r="2.5" />
+                    <!-- Back toe (hallux) -->
+                    <line x1="14" y1="20" x2="14" y2="32" />
+                    <circle cx="14" cy="32" r="2.5" />
+                </g>
+            </svg>
+            <svg class="loader-footprint loader-footprint-2" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" stroke-width="2.5" fill="currentColor" stroke-linecap="round">
+                    <!-- Center toe (longest) -->
+                    <line x1="14" y1="20" x2="14" y2="2" />
+                    <circle cx="14" cy="2" r="2.5" />
+                    <!-- Left toe -->
+                    <line x1="14" y1="20" x2="4" y2="8" />
+                    <circle cx="4" cy="8" r="2.5" />
+                    <!-- Right toe -->
+                    <line x1="14" y1="20" x2="24" y2="8" />
+                    <circle cx="24" cy="8" r="2.5" />
+                    <!-- Back toe (hallux) -->
+                    <line x1="14" y1="20" x2="14" y2="32" />
+                    <circle cx="14" cy="32" r="2.5" />
+                </g>
+            </svg>
+            <svg class="loader-footprint loader-footprint-3" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" stroke-width="2.5" fill="currentColor" stroke-linecap="round">
+                    <!-- Center toe (longest) -->
+                    <line x1="14" y1="20" x2="14" y2="2" />
+                    <circle cx="14" cy="2" r="2.5" />
+                    <!-- Left toe -->
+                    <line x1="14" y1="20" x2="4" y2="8" />
+                    <circle cx="4" cy="8" r="2.5" />
+                    <!-- Right toe -->
+                    <line x1="14" y1="20" x2="24" y2="8" />
+                    <circle cx="24" cy="8" r="2.5" />
+                    <!-- Back toe (hallux) -->
+                    <line x1="14" y1="20" x2="14" y2="32" />
+                    <circle cx="14" cy="32" r="2.5" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -21,7 +75,8 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero hero-asymmetric">
+            <img src="footprints.png" alt="" class="hero-footprint-decoration">
             <img src="logo.png" alt="The Prepared Dodo" class="hero-logo">
             <h1>Software Automation Solutions</h1>
             <p class="tagline">Streamline your business with custom automation and data management systems</p>
@@ -69,7 +124,7 @@
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Deploy</h3>
-                    <p>Seamless integration with ongoing support and monitoring</p>
+                    <p>Seamless integration with options for ongoing support and monitoring</p>
                 </div>
             </div>
         </section>
@@ -90,10 +145,87 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 The Prepared Dodo. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> The Prepared Dodo. All rights reserved.</p>
     </footer>
 
     <script>
+        // Randomize loader footprints positions and rotations
+        const loaderFootprints = document.querySelectorAll('.loader-footprint');
+        loaderFootprints.forEach((footprint, index) => {
+            const baseBottom = 10 + (index * 30);
+            const baseLeft = 20 + (index * 40);
+
+            // Random offset: +/- 5px
+            const randomBottomOffset = (Math.random() - 0.5) * 10;
+            const randomLeftOffset = (Math.random() - 0.5) * 10;
+
+            footprint.style.bottom = `${baseBottom + randomBottomOffset}px`;
+            footprint.style.left = `${baseLeft + randomLeftOffset}px`;
+
+            // Random rotation
+            const isLeft = index % 2 === 0;
+            const baseRotation = isLeft ? -20 : 20;
+            const randomRotation = (Math.random() - 0.5) * 20; // +/- 10 degrees
+            const finalRotation = baseRotation + randomRotation;
+
+            // Set initial transform with rotation
+            footprint.style.transform = `rotate(${finalRotation}deg)`;
+
+            // Store rotation for animation
+            footprint.dataset.rotation = finalRotation;
+
+            // Override animation to include rotation
+            const animationName = `footprintFade${index}`;
+            const keyframes = `
+                @keyframes ${animationName} {
+                    0%, 100% {
+                        opacity: 0;
+                        transform: scale(0.8) rotate(${finalRotation}deg);
+                    }
+                    50% {
+                        opacity: 1;
+                        transform: scale(1) rotate(${finalRotation}deg);
+                    }
+                }
+            `;
+
+            // Inject keyframes
+            const style = document.createElement('style');
+            style.textContent = keyframes;
+            document.head.appendChild(style);
+
+            // Apply animation
+            const delay = index * 0.3;
+            footprint.style.animation = `${animationName} 1.5s ease-in-out ${delay}s infinite`;
+        });
+
+        // Preload images and show page when ready
+        const imagesToLoad = ['logo.png'];
+        let imagesLoaded = 0;
+
+        function imageLoaded() {
+            imagesLoaded++;
+            if (imagesLoaded === imagesToLoad.length) {
+                // All images loaded, fade out loader and show page
+                const loader = document.getElementById('pageLoader');
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        // Preload all images
+        imagesToLoad.forEach(src => {
+            const img = new Image();
+            img.onload = imageLoaded;
+            img.onerror = imageLoaded; // Continue even if image fails to load
+            img.src = src;
+        });
+
+        // Auto-update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Smooth scroll to contact section
         const scrollButton = document.getElementById('scrollToContact');
         const contactSection = document.getElementById('contact');
@@ -172,8 +304,8 @@
             </svg>
         `;
 
-        // Add hover footprints to interactive elements
-        const hoverElements = document.querySelectorAll('.service-card, .process-step, .cta-button, .email-link');
+        // Add hover footprints to interactive elements (excluding buttons)
+        const hoverElements = document.querySelectorAll('.service-card, .process-step');
 
         hoverElements.forEach(element => {
             // Create footprint container
@@ -201,11 +333,18 @@
 
             element.appendChild(footprintContainer);
 
+            // Store timeouts so we can cancel them
+            let animationTimeouts = [];
+
             // Handle hover to replay animation
             element.addEventListener('mouseenter', () => {
+                // Clear any existing timeouts
+                animationTimeouts.forEach(timeout => clearTimeout(timeout));
+                animationTimeouts = [];
+
                 // Reset animation by removing and re-adding class
                 footprints.forEach((footprint, index) => {
-                    footprint.classList.remove('animate');
+                    footprint.classList.remove('animate', 'fade-out');
                     // Force reflow to restart animation
                     void footprint.offsetWidth;
 
@@ -225,29 +364,36 @@
                     const baseRotation = isLeft ? 145 : 125;
                     const randomRotation = (Math.random() - 0.5) * 20; // +/- 10 degrees
 
-                    if (isLeft) {
-                        footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(0.5)`;
-                    } else {
-                        footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(0.5)`;
-                    }
+                    // Store rotation for this footprint
+                    footprint.dataset.rotation = baseRotation + randomRotation;
+
+                    footprint.style.transform = `rotate(${footprint.dataset.rotation}deg) scale(0.5)`;
+                    footprint.style.opacity = '0';
 
                     // Add animation class with delay
-                    setTimeout(() => {
+                    const timeout = setTimeout(() => {
                         footprint.classList.add('animate');
-                        // Update transform to include rotation when animating
-                        if (isLeft) {
-                            footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(1)`;
-                        } else {
-                            footprint.style.transform = `rotate(${baseRotation + randomRotation}deg) scale(1)`;
-                        }
+                        footprint.style.transform = `rotate(${footprint.dataset.rotation}deg) scale(1)`;
+                        footprint.style.opacity = '1';
                     }, index * 300);
+
+                    animationTimeouts.push(timeout);
                 });
             });
 
             element.addEventListener('mouseleave', () => {
-                // Remove animation class to reset
+                // Clear any pending animations
+                animationTimeouts.forEach(timeout => clearTimeout(timeout));
+                animationTimeouts = [];
+
+                // Fade out all footprints smoothly
                 footprints.forEach(footprint => {
                     footprint.classList.remove('animate');
+                    // Keep rotation but fade out
+                    if (footprint.dataset.rotation) {
+                        footprint.style.transform = `rotate(${footprint.dataset.rotation}deg) scale(0.5)`;
+                    }
+                    footprint.style.opacity = '0';
                 });
             });
         });

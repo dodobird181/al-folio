@@ -51,6 +51,59 @@ body {
     letter-spacing: -0.5px;
 }
 
+/* Full Page Loader */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--light-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.3s ease;
+}
+
+.loader-footprints {
+    position: relative;
+    width: 150px;
+    height: 120px;
+}
+
+.loader-footprint {
+    position: absolute;
+    width: 30px;
+    height: 45px;
+    color: var(--accent-color);
+    opacity: 0;
+}
+
+/* Footprint animation */
+.loader-footprint-1 {
+    animation: footprintFadeLoop 1.5s ease-in-out 0s infinite;
+}
+
+.loader-footprint-2 {
+    animation: footprintFadeLoop 1.5s ease-in-out 0.3s infinite;
+}
+
+.loader-footprint-3 {
+    animation: footprintFadeLoop 1.5s ease-in-out 0.6s infinite;
+}
+
+@keyframes footprintFadeLoop {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Header & Navigation */
 header {
     background: var(--white);
@@ -79,6 +132,15 @@ nav {
 .logo-img {
     height: 50px;
     width: auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .logo-text {
@@ -125,7 +187,7 @@ section {
     padding: 5rem 0;
 }
 
-/* Hero Section */
+/* Hero Section - Default (Centered) */
 .hero {
     text-align: center;
     padding: 6rem 0 7rem;
@@ -173,6 +235,186 @@ section {
     padding: 1rem 2rem;
     border: var(--border);
     border-color: var(--white);
+}
+
+/* ========================================== */
+/* ALTERNATIVE LAYOUTS - Add class to .hero */
+/* ========================================== */
+
+/* Layout 2: Split Screen (Logo Left, Text Right) */
+.hero.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    padding: 6rem 2rem;
+}
+
+.hero.hero-split .hero-logo {
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+    justify-self: end;
+}
+
+.hero.hero-split h1,
+.hero.hero-split .tagline {
+    margin: 0;
+}
+
+.hero.hero-split .tagline {
+    margin-top: 2rem;
+}
+
+/* Layout 3: Minimal (Small Logo, Big Typography) */
+.hero.hero-minimal {
+    padding: 8rem 2rem;
+}
+
+.hero.hero-minimal .hero-logo {
+    width: 120px;
+    margin-bottom: 3rem;
+}
+
+.hero.hero-minimal h1 {
+    font-size: 5rem;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.hero.hero-minimal .tagline {
+    font-size: 1.4rem;
+    max-width: 800px;
+    padding: 1.5rem 2.5rem;
+}
+
+/* Layout 4: Asymmetric (Logo Top-Left, Content Offset) */
+.hero.hero-asymmetric {
+    text-align: left;
+    padding: 4rem 2rem 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero.hero-asymmetric .hero-logo {
+    margin: 0 0 3rem 0;
+    width: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero.hero-asymmetric h1 {
+    margin-bottom: 2rem;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero.hero-asymmetric .tagline {
+    margin: 0;
+    max-width: 600px;
+    align-self: flex-end;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Giant Footprint Decoration */
+.hero-footprint-decoration {
+    position: absolute;
+    top: 52px;
+    right: -12px;
+    width: 572px;
+    height: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+    transform: rotate(25deg);
+    filter: grayscale(100%) contrast(200%);
+}
+
+/* Layout 5: Stacked (Logo Huge, Text Below) */
+.hero.hero-stacked {
+    padding: 4rem 2rem 6rem;
+}
+
+.hero.hero-stacked .hero-logo {
+    width: 300px;
+    margin-bottom: 3rem;
+}
+
+.hero.hero-stacked h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero.hero-stacked .tagline {
+    font-size: 1.1rem;
+    max-width: 700px;
+}
+
+/* Layout 6: Side-by-Side Compact */
+.hero.hero-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    text-align: left;
+}
+
+.hero.hero-compact .hero-logo {
+    width: 180px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.hero.hero-compact h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero.hero-compact .tagline {
+    margin: 0;
+    max-width: 500px;
+}
+
+/* Responsive adjustments for alternative layouts */
+@media (max-width: 768px) {
+    .hero.hero-split,
+    .hero.hero-compact {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero.hero-split .hero-logo {
+        justify-self: center;
+    }
+
+    .hero.hero-asymmetric {
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .hero.hero-asymmetric .tagline {
+        align-self: center;
+        margin-right: 0;
+    }
+
+    .hero.hero-minimal h1 {
+        font-size: 3rem;
+    }
+
+    .hero.hero-stacked .hero-logo {
+        width: 200px;
+    }
 }
 
 /* Services Section */
@@ -255,7 +497,7 @@ section {
     margin: 0 -2rem;
     padding: 5rem 2rem;
     border-top: var(--border);
-    border-bottom: var(--border);
+    border-bottom: none;
 }
 
 .process h2 {
@@ -492,14 +734,7 @@ footer {
     height: 30px;
     color: var(--accent-color);
     opacity: 0;
-    transform: scale(0.5);
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Animate class is added by JavaScript */
-.footprint.animate {
-    opacity: 1;
-    transform: scale(1);
 }
 
 /* Stagger footprints to look like walking steps */
@@ -543,16 +778,26 @@ footer {
 
 /* Position containers relatively for footprints */
 .service-card,
-.process-step,
-.cta-button,
-.email-link {
+.process-step {
     position: relative;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    /* Hide arrows on tablet sizes to prevent wrapping issues */
+    .process-arrow {
+        display: none;
+    }
+
+    .process-flow {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.2rem;
+        text-shadow: 4px 4px 0 var(--primary-color);
     }
 
     .hero-logo {
@@ -575,8 +820,16 @@ footer {
     }
 
     nav {
-        flex-direction: column;
-        gap: 1.25rem;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+        width: auto;
+        white-space: normal;
+        text-align: center;
     }
 
     .logo-img {
@@ -591,8 +844,12 @@ footer {
         padding: 2rem;
     }
 
-    .process-arrow {
-        display: none;
+    .email-link {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        white-space: normal;
+        word-break: break-word;
+        max-width: 90%;
     }
 
     .process-flow {
@@ -607,6 +864,7 @@ footer {
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;
+        text-shadow: 3px 3px 0 var(--primary-color);
     }
 
     .hero-logo {
