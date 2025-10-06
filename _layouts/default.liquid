@@ -17,6 +17,11 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Loading Overlay -->
+    <div id="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
     <!-- Header -->
     {% include header.liquid %}
 

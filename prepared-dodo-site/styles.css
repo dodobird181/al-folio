@@ -1,0 +1,615 @@
+:root {
+    /* ============================================ */
+    /* BRUTALIST COLOR SCHEME - CHANGE THESE ONLY */
+    /* ============================================ */
+/* 
+    --brutal-dark: #000000;
+    --brutal-light: #ffffff;
+    --brutal-accent: #ff0000; */
+
+    /* Green */
+    --brutal-dark: #0a0a0a;
+    --brutal-light: #ffffff;
+    --brutal-accent: #00ff00;
+
+
+    /* 4. DODO SLATE - Cool Grey & Warm Accent */
+    /* --brutal-dark: #4a4a52;
+    --brutal-light: #ffffff;
+    --brutal-accent: #ff9a3c; */
+
+
+    /* ============================================ */
+    /* DERIVED COLORS - AUTO-CALCULATED */
+    /* ============================================ */
+
+    --primary-color: var(--brutal-dark);
+    --accent-color: var(--brutal-accent);
+    --secondary-accent: color-mix(in srgb, var(--brutal-accent) 80%, black);
+    --text-color: var(--brutal-dark);
+    --light-bg: var(--brutal-light);
+    --white: var(--brutal-light);
+    --card-bg: color-mix(in srgb, var(--brutal-light) 95%, var(--brutal-dark));
+    --border-color: var(--brutal-dark);
+    --border-width: 4px;
+    --border: var(--border-width) solid var(--border-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+    line-height: 1.4;
+    color: var(--text-color);
+    background: var(--light-bg);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--white);
+    padding: 1.5rem 2rem;
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: var(--border);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.cta-button {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0;
+    transition: all 0.1s ease;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 0;
+    border: var(--border);
+    border-color: var(--primary-color);
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: inherit;
+}
+
+.cta-button:hover {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0 var(--accent-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 0 7rem;
+    background: var(--accent-color);
+    margin: 0 -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    border-bottom: var(--border);
+}
+
+.hero::after {
+    display: none;
+}
+
+.hero-logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 2rem;
+    filter: none;
+    border: var(--border);
+    padding: 1rem;
+    background: var(--white);
+}
+
+.hero h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-shadow: 6px 6px 0 var(--primary-color);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--white);
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 900;
+    line-height: 1.4;
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    border: var(--border);
+    border-color: var(--white);
+}
+
+/* Services Section */
+.services {
+    background: var(--light-bg);
+    margin: 0 -2rem;
+    padding: 5rem 2rem;
+}
+
+.services h2 {
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 3.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    letter-spacing: -2px;
+    transform: rotate(-2deg);
+}
+
+.services h2::after {
+    display: none;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    border: var(--border);
+    transition: all 0.1s ease;
+    position: relative;
+    overflow: visible;
+}
+
+.service-card::before {
+    display: none;
+}
+
+.service-card:hover {
+    transform: translate(8px, -8px);
+    box-shadow: -8px 8px 0 var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.service-card:hover::before {
+    display: none;
+}
+
+.service-card h3 {
+    font-family: 'Arial Black', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.service-card p {
+    color: var(--primary-color);
+    line-height: 1.4;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Process Section */
+.process {
+    background: var(--white);
+    margin: 0 -2rem;
+    padding: 5rem 2rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.process h2 {
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 3.5rem;
+    letter-spacing: -2px;
+}
+
+.process-flow {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 200px;
+    background: var(--light-bg);
+    border: var(--border);
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: all 0.1s ease;
+}
+
+.process-step:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px 0 var(--primary-color);
+}
+
+.step-number {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+}
+
+.process-step h3 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    letter-spacing: -1px;
+}
+
+.process-step p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.process-arrow {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+/* About Section */
+.about {
+    text-align: left;
+    background: var(--primary-color);
+    margin: 0 -2rem;
+    padding: 5rem 2rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    border-color: var(--accent-color);
+}
+
+.about h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    letter-spacing: -2px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h2::after {
+    display: none;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.about a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 900;
+    border-bottom: 3px solid var(--accent-color);
+    transition: all 0.1s ease;
+}
+
+.about a:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background: var(--white);
+    color: var(--primary-color);
+    margin: 0 -2rem;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    display: none;
+}
+
+.contact h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    position: relative;
+    letter-spacing: -2px;
+    transform: rotate(2deg);
+}
+
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border: var(--border);
+    background: var(--accent-color);
+    border-radius: 0;
+    transition: all 0.1s ease;
+    font-weight: 900;
+    position: relative;
+    letter-spacing: -1px;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: inherit;
+}
+
+.email-link:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translate(6px, -6px);
+    box-shadow: -6px 6px 0 var(--accent-color);
+}
+
+.copy-notification {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200px);
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 1.25rem 2.5rem;
+    border: var(--border);
+    font-weight: 900;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+.copy-notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.copy-notification span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--white);
+    font-size: 0.75rem;
+    border-top: var(--border);
+    border-color: var(--accent-color);
+    font-weight: 900;
+}
+
+/* Hover Footprints */
+.footprint-container {
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    width: 100px;
+    height: 80px;
+    pointer-events: none;
+}
+
+.footprint {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    color: var(--accent-color);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animate class is added by JavaScript */
+.footprint.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger footprints to look like walking steps */
+/* Reversed order - walking FROM top-left TOWARDS the card */
+.footprint:nth-child(1) {
+    top: 10px;
+    left: 10px;
+}
+
+.footprint:nth-child(2) {
+    top: 25px;
+    left: 25px;
+}
+
+.footprint:nth-child(3) {
+    top: 40px;
+    left: 40px;
+}
+
+/* Rotate footprints to point towards bottom-right (towards card) */
+.footprint-left {
+    transform: rotate(145deg) scale(0.5);
+}
+
+.footprint-left.animate {
+    transform: rotate(145deg) scale(1);
+}
+
+.footprint-right {
+    transform: rotate(125deg) scale(0.5);
+}
+
+.footprint-right.animate {
+    transform: rotate(125deg) scale(1);
+}
+
+.footprint-icon {
+    width: 100%;
+    height: 100%;
+}
+
+/* Position containers relatively for footprints */
+.service-card,
+.process-step,
+.cta-button,
+.email-link {
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-logo {
+        width: 140px;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 3.5rem 0;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2,
+    .process h2 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .process-arrow {
+        display: none;
+    }
+
+    .process-flow {
+        flex-direction: column;
+    }
+
+    .process-step {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-logo {
+        width: 120px;
+    }
+}

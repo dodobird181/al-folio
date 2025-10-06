@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Prepared Dodo - Software Automation Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="The Prepared Dodo" class="logo-img">
+                <span class="logo-text">The Prepared Dodo</span>
+            </div>
+            <button class="cta-button" id="scrollToContact">Get in Touch</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="logo.png" alt="The Prepared Dodo" class="hero-logo">
+            <h1>Software Automation Solutions</h1>
+            <p class="tagline">Streamline your business with custom automation and data management systems</p>
+        </section>
+
+        <section class="services">
+            <h2>What We Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Process Automation</h3>
+                    <p>Eliminate repetitive tasks and reduce manual errors with intelligent workflow automation</p>
+                </div>
+                <div class="service-card">
+                    <h3>Data Management</h3>
+                    <p>Design and implement scalable data systems that keep your information organized and accessible</p>
+                </div>
+                <div class="service-card">
+                    <h3>Integration Solutions</h3>
+                    <p>Connect your existing tools and platforms to work seamlessly together</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2>How We Work</h2>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your workflows to identify automation opportunities</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Build</h3>
+                    <p>Custom solutions designed specifically for your business needs</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Test</h3>
+                    <p>Rigorous testing ensures reliability before deployment</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Deploy</h3>
+                    <p>Seamless integration with ongoing support and monitoring</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About</h2>
+            <p>The Prepared Dodo specializes in building custom software automation solutions and data management systems for businesses ready to scale. Founded by <a href="https://sammorris.ca" target="_blank">Sam Morris</a>, we combine technical expertise with practical business understanding to deliver solutions that actually work.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Let's Talk</h2>
+            <p>Ready to automate your business processes?</p>
+            <button class="email-link" id="copyEmail">hello@thepreparedodo.com</button>
+            <div class="copy-notification" id="copyNotification">
+                <span>✓ Copied to clipboard</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Prepared Dodo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll to contact section
+        const scrollButton = document.getElementById('scrollToContact');
+        const contactSection = document.getElementById('contact');
+
+        scrollButton.addEventListener('click', () => {
+            contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+
+        // Copy email to clipboard
+        const emailButton = document.getElementById('copyEmail');
+        const notification = document.getElementById('copyNotification');
+        const emailAddress = 'hello@thepreparedodo.com';
+
+        emailButton.addEventListener('click', async () => {
+            try {
+                // Modern clipboard API (works on mobile)
+                await navigator.clipboard.writeText(emailAddress);
+                notification.classList.add('show');
+
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            } catch (err) {
+                // Fallback for older browsers and some mobile browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = emailAddress;
+                textArea.style.position = 'fixed';
+                textArea.style.top = '0';
+                textArea.style.left = '0';
+                textArea.style.opacity = '0';
+                textArea.setAttribute('readonly', '');
+                document.body.appendChild(textArea);
+
+                // Mobile-friendly selection
+                if (navigator.userAgent.match(/ipad|iphone/i)) {
+                    const range = document.createRange();
+                    range.selectNodeContents(textArea);
+                    const selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    textArea.setSelectionRange(0, 999999);
+                } else {
+                    textArea.select();
+                }
+
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            }
+        });
+
+        // Add footprint SVG definition for reuse
+        const footprintSVG = `
+            <svg class="footprint-icon" viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round">
+                    <!-- Center toe -->
+                    <line x1="12" y1="18" x2="12" y2="0" />
+                    <circle cx="12" cy="0" r="2" />
+                    <!-- Left toe -->
+                    <line x1="12" y1="18" x2="2" y2="6" />
+                    <circle cx="2" cy="6" r="2" />
+                    <!-- Right toe -->
+                    <line x1="12" y1="18" x2="22" y2="6" />
+                    <circle cx="22" cy="6" r="2" />
+                    <!-- Back toe -->
+                    <line x1="12" y1="18" x2="12" y2="26" />
+                    <circle cx="12" cy="26" r="2" />
+                </g>
+            </svg>
+        `;
+
+        // Add hover footprints to interactive elements
+        const hoverElements = document.querySelectorAll('.service-card, .process-step, .cta-button, .email-link');
+
+        hoverElements.forEach(element => {
+            // Create footprint container
+            const footprintContainer = document.createElement('div');
+            footprintContainer.className = 'footprint-container';
+
+            // Create 3 footprints with staggered positions
+            const footprints = [];
+            for (let i = 0; i < 3; i++) {
+                const footprint = document.createElement('div');
+                footprint.className = 'footprint';
+
+                // Alternate left/right
+                const isLeft = i % 2 === 0;
+                if (isLeft) {
+                    footprint.classList.add('footprint-left');
+                } else {
+                    footprint.classList.add('footprint-right');
+                }
+
+                footprint.innerHTML = footprintSVG;
+                footprintContainer.appendChild(footprint);
+                footprints.push(footprint);
+            }
+
+            element.appendChild(footprintContainer);
+
+            // Handle hover to replay animation
+            element.addEventListener('mouseenter', () => {
+                // Reset animation by removing and re-adding class
+                footprints.forEach((footprint, index) => {
+                    footprint.classList.remove('animate');
+                    // Force reflow to restart animation
+                    void footprint.offsetWidth;
+
+                    // Add animation class with delay
+                    setTimeout(() => {
+                        footprint.classList.add('animate');
+                    }, index * 300); // 150ms delay between each footprint
+                });
+            });
+
+            element.addEventListener('mouseleave', () => {
+                // Remove animation class to reset
+                footprints.forEach(footprint => {
+                    footprint.classList.remove('animate');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
