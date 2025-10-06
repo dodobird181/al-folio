@@ -310,6 +310,8 @@ section {
 /* Layout 4: Asymmetric (Logo Top-Left, Content Offset) */
 .hero.hero-asymmetric {
     text-align: left;
+    margin-top: 2rem;
+    border-top: var(--border);
     padding: 4rem 2rem 3rem 4rem;
     display: flex;
     flex-direction: column;
@@ -690,6 +692,7 @@ section {
 
 .email-link:hover {
     background: var(--primary-color);
+    color: var(--accent-color);
     border-color: var(--primary-color);
     transform: translate(6px, -6px);
     box-shadow: -6px 6px 0 var(--accent-color);

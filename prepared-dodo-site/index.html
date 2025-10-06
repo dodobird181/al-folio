@@ -135,7 +135,7 @@
         </section>
 
         <section id="contact" class="contact">
-            <h2>Let's Talk.</h2>
+            <h2>Let's Talk</h2>
             <p>Ready to automate your business processes?</p>
             <button class="email-link" id="copyEmail">hello@thepreparedodo.com</button>
             <div class="copy-notification" id="copyNotification">
@@ -163,8 +163,10 @@
             footprint.style.left = `${baseLeft + randomLeftOffset}px`;
 
             // Random rotation
+            const rotationOffset = 30;
+            const rotationDeviation = 20;
             const isLeft = index % 2 === 0;
-            const baseRotation = isLeft ? -20 : 20;
+            const baseRotation = isLeft ? rotationOffset + rotationDeviation : rotationOffset - rotationDeviation;
             const randomRotation = (Math.random() - 0.5) * 20; // +/- 10 degrees
             const finalRotation = baseRotation + randomRotation;
 
@@ -200,7 +202,7 @@
         });
 
         // Preload images and show page when ready
-        const imagesToLoad = ['logo.png'];
+        const imagesToLoad = ['logo.png', "footprints.png"];
         let imagesLoaded = 0;
 
         function imageLoaded() {
@@ -232,10 +234,10 @@
 
         window.addEventListener('scroll', () => {
             const heroHeight = heroSection.offsetHeight;
-            const heroHalfway = heroSection.offsetTop + (heroHeight / 2);
+            const heroOneThird = heroSection.offsetTop + (heroHeight *(2/5));
             const scrollPosition = window.scrollY;
 
-            if (scrollPosition > heroHalfway) {
+            if (scrollPosition > heroOneThird) {
                 header.classList.add('header-visible');
             } else {
                 header.classList.remove('header-visible');
