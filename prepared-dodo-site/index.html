@@ -131,11 +131,11 @@
 
         <section class="about">
             <h2>About</h2>
-            <p>The Prepared Dodo specializes in building custom software automation solutions and data management systems for businesses ready to scale. Founded by <a href="https://sammorris.ca" target="_blank">Sam Morris</a>, we combine technical expertise with practical business understanding to deliver solutions that actually work.</p>
+            <p>The Prepared Dodo specializes in building custom software automation solutions and data management systems for small-to-medium sized businesses. Founded by <a href="https://sammorris.ca" target="_blank">Samuel Morris</a>, we combine technical expertise with practical business understanding to deliver solutions that actually work.</p>
         </section>
 
         <section id="contact" class="contact">
-            <h2>Let's Talk</h2>
+            <h2>Let's Talk.</h2>
             <p>Ready to automate your business processes?</p>
             <button class="email-link" id="copyEmail">hello@thepreparedodo.com</button>
             <div class="copy-notification" id="copyNotification">
@@ -225,6 +225,22 @@
 
         // Auto-update copyright year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Hide/show header based on scroll position
+        const header = document.querySelector('header');
+        const heroSection = document.querySelector('.hero');
+
+        window.addEventListener('scroll', () => {
+            const heroHeight = heroSection.offsetHeight;
+            const heroHalfway = heroSection.offsetTop + (heroHeight / 2);
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > heroHalfway) {
+                header.classList.add('header-visible');
+            } else {
+                header.classList.remove('header-visible');
+            }
+        });
 
         // Smooth scroll to contact section
         const scrollButton = document.getElementById('scrollToContact');
