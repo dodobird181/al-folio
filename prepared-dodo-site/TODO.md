@@ -1,3 +1,3 @@
 - [x] 1. Text color on my email address should be green on hover just like the "Get In Touch" button.
-- [ ] 2. Add favicon.
+- [x] 2. Add favicon.
 - [ ] Split out page loader JS and put it in header.
