@@ -79,32 +79,40 @@ body {
 
 .loader-footprint {
     position: absolute;
-    width: 30px;
-    height: 45px;
+    width: 50px;
+    height: 75px;
     color: var(--accent-color);
-    opacity: 0;
+    opacity: 1;
 }
 
 /* Footprint animation */
 .loader-footprint-1 {
-    animation: footprintFadeLoop 1.5s ease-in-out 0s infinite;
+    animation: footprintStep 1.8s linear 0s infinite;
 }
 
 .loader-footprint-2 {
-    animation: footprintFadeLoop 1.5s ease-in-out 0.3s infinite;
+    animation: footprintStep 1.8s linear 0.6s infinite;
 }
 
 .loader-footprint-3 {
-    animation: footprintFadeLoop 1.5s ease-in-out 0.6s infinite;
+    animation: footprintStep 1.8s linear 1.2s infinite;
 }
 
-@keyframes footprintFadeLoop {
-    0%, 100% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    50% {
+@keyframes footprintStep {
+    0% {
         opacity: 1;
+        transform: scale(1);
+    }
+    33.33% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    33.34% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
         transform: scale(1);
     }
 }
@@ -417,8 +425,11 @@ section {
         gap: 2rem;
     }
 
-    .hero.hero-split .hero-logo {
-        justify-self: center;
+    .hero.hero-asymmetric .hero-logo {
+        /* Position the Dodobird on top of "The Prepared Dodo" */
+        top: 4rem;
+        left: -1rem;
+        margin-top: 2rem;
     }
 
     .hero.hero-asymmetric {
@@ -755,8 +766,8 @@ footer {
 
 .footprint {
     position: absolute;
-    width: 20px;
-    height: 30px;
+    width: 50px;
+    height: 75px;
     color: var(--accent-color);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -820,10 +831,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
+    /* .hero h1 {
         font-size: 2.2rem;
         text-shadow: 4px 4px 0 var(--primary-color);
-    }
+    } */
 
     .hero-logo {
         width: 140px;
@@ -887,10 +898,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
+    /* .hero h1 {
         font-size: 1.8rem;
         text-shadow: 3px 3px 0 var(--primary-color);
-    }
+    } */
 
     .hero-logo {
         width: 120px;
