@@ -200,7 +200,7 @@
         </section>
 
         <section id="contact" class="contact">
-            <h2>Let's Talk</h2>
+            <h2>Let's Talk.</h2>
             <p>Ready to automate your business processes?</p>
             <button class="email-link" id="copyEmail">hello@thepreparedodo.com</button>
             <div class="copy-notification" id="copyNotification">
@@ -429,8 +429,8 @@
                     void footprint.offsetWidth;
 
                     // Add randomness to position and rotation
-                    const baseTop = -50 + (index * 45);
-                    const baseLeft = -50 + (index * 45);
+                    const baseTop = -250 + (index * 45);
+                    const baseLeft = 0 + (index * 45);
 
                     // Random offset: +/- 10px for natural variation
                     const randomTopOffset = (Math.random() - 0.5) * 20;
@@ -454,7 +454,9 @@
                     const timeout = setTimeout(() => {
                         footprint.classList.add('animate');
                         footprint.style.transform = `rotate(${footprint.dataset.rotation}deg) scale(1)`;
-                        footprint.style.opacity = '1';
+                        // Progressive opacity: 30%, 60%, 100%
+                        const opacities = [0.3, 0.6, 1.0];
+                        footprint.style.opacity = opacities[index];
                     }, index * 300);
 
                     animationTimeouts.push(timeout);

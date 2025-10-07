@@ -499,6 +499,7 @@ section {
     padding-bottom: 1rem;
     letter-spacing: -2px;
     transform: rotate(-2deg);
+    z-index: 10;
 }
 
 .services h2::after {
@@ -572,6 +573,8 @@ section {
     color: var(--primary-color);
     margin-bottom: 3.5rem;
     letter-spacing: -2px;
+    z-index: 10;
+    position: relative;
 }
 
 .process-flow {
@@ -791,6 +794,7 @@ footer {
     width: 150px;
     height: 120px;
     pointer-events: none;
+    z-index: 5;
 }
 
 .footprint {
@@ -845,6 +849,12 @@ footer {
 .service-card,
 .process-step {
     position: relative;
+}
+
+.service-card > *,
+.process-step > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Responsive */
