@@ -312,7 +312,7 @@ section {
     text-align: left;
     margin-top: 2rem;
     border-top: var(--border);
-    padding: 4rem 2rem 3rem 4rem;
+    padding: 0rem 2rem 3rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -321,14 +321,18 @@ section {
 
 .hero.hero-asymmetric .hero-logo {
     margin: 0 0 3rem 0;
-    width: 150px;
+    width: 282px;
+    top: 7rem;
+    left: 5rem;
     position: relative;
     z-index: 2;
+    border: none;
+    background: none;
 }
 
 .hero.hero-asymmetric h1 {
     margin-bottom: 2rem;
-    max-width: 700px;
+    max-width: 482px;
     position: relative;
     z-index: 2;
 }
@@ -346,15 +350,14 @@ section {
 /* Giant Footprint Decoration */
 .hero-footprint-decoration {
     position: absolute;
-    top: 52px;
-    right: -12px;
+    top: -513px;
+    right: 137px;
     width: 572px;
     height: auto;
-    opacity: 0.08;
+    opacity: 0.15;
     pointer-events: none;
     z-index: 1;
-    transform: rotate(25deg);
-    filter: grayscale(100%) contrast(200%);
+    transform: rotate(-20deg);
 }
 
 /* Layout 5: Stacked (Logo Huge, Text Below) */

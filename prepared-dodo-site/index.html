@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Prepared Dodo - Software Automation Solutions</title>
+    <title>The Prepared Dodo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -76,9 +76,9 @@
 
     <main>
         <section class="hero hero-asymmetric">
-            <img src="footprints.png" alt="" class="hero-footprint-decoration">
+            <img src="footprints.svg" alt="" class="hero-footprint-decoration">
             <img src="logo.png" alt="The Prepared Dodo" class="hero-logo">
-            <h1>Software Automation Solutions</h1>
+            <h1>The Prepared Dodo</h1>
             <p class="tagline">Streamline your business with custom automation and data management systems</p>
         </section>
 
@@ -202,7 +202,7 @@
         });
 
         // Preload images and show page when ready
-        const imagesToLoad = ['logo.png', "footprints.png"];
+        const imagesToLoad = ['logo.png', "footprints.svg"];
         let imagesLoaded = 0;
 
         function imageLoaded() {
@@ -224,6 +224,9 @@
             img.onerror = imageLoaded; // Continue even if image fails to load
             img.src = src;
         });
+    </script>
+
+    <script>
 
         // Auto-update copyright year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
