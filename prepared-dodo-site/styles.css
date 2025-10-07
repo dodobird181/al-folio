@@ -425,22 +425,36 @@ section {
         gap: 2rem;
     }
 
-    .hero.hero-asymmetric .hero-logo {
-        /* Position the Dodobird on top of "The Prepared Dodo" */
-        top: 4rem;
-        left: -1rem;
-        margin-top: 2rem;
-    }
-
     .hero.hero-asymmetric {
         align-items: center;
         text-align: center;
-        padding: 4rem 2rem;
+        padding: 3rem 1.5rem;
+        margin-top: 0;
+    }
+
+    .hero.hero-asymmetric .hero-logo {
+        position: static;
+        width: 180px;
+        margin: 0 auto 2rem;
+    }
+
+    .hero.hero-asymmetric h1 {
+        font-size: 2.5rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
     }
 
     .hero.hero-asymmetric .tagline {
         align-self: center;
         margin-right: 0;
+        margin-top: 0;
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .hero-footprint-decoration {
+        display: none;
     }
 
     .hero.hero-minimal h1 {
@@ -449,6 +463,21 @@ section {
 
     .hero.hero-stacked .hero-logo {
         width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero.hero-asymmetric .hero-logo {
+        width: 140px;
+    }
+
+    .hero.hero-asymmetric h1 {
+        font-size: 2rem;
+    }
+
+    .hero.hero-asymmetric .tagline {
+        font-size: 0.9rem;
+        padding: 0.875rem 1.25rem;
     }
 }
 
