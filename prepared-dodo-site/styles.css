@@ -415,6 +415,11 @@ section {
     max-width: 500px;
 }
 
+.navbar-logo-image{
+    width: 50px;
+    height: auto;
+}
+
 /* Responsive adjustments for alternative layouts */
 @media (max-width: 768px) {
     .hero.hero-split,
