@@ -1,0 +1,1 @@
+!function(){"use strict";function e(){var e=document.getElementById("page-loader");e&&e.classList.add("loaded")}function d(){"undefined"!=typeof imagesLoaded?imagesLoaded(document.body,{background:!0},(function(){e()})):"complete"===document.readyState?e():window.addEventListener("load",e)}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",d):d()}();
