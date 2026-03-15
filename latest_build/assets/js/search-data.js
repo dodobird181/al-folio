@@ -368,12 +368,7 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-sambot",
-          title: 'Sambot',
-          description: "A chatbot engineered to only respond with truthful information about me.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
+          section: "News",},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
@@ -413,6 +408,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-sambot",
+          title: 'Sambot',
+          description: "A chatbot engineered to only respond with truthful information about me.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sambot_project/";
             },},{
         id: 'social-github',
         title: 'GitHub',
