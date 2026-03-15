@@ -1,9 +1,9 @@
 ---
 layout: about
 title: about
-permalink: /about/
+permalink: /
 nav: true
-nav_order: 2 
+nav_order: 1
 subtitle: A programmer who believes in the capacity of well-written software to facilitate human prosperity and betterment for all.
 
 profile:
