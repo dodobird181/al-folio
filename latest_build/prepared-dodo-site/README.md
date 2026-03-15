@@ -99,7 +99,7 @@ Edit CSS variables in `styles.css` lines 1-6:
 
 Replace text logo with image in `index.html` line 11:
 ```html
-<img src="logo.png" alt="The Prepared Dodo" class="logo">
+<img src="logo.webp" alt="The Prepared Dodo" class="logo">
 ```
 
 ## Testing
