@@ -12,9 +12,12 @@ let toggleThemeSetting = () => {
 
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+  localStorage.setItem("theme", "dark");
 
-  document.documentElement.setAttribute("data-theme-setting", themeSetting);
+  // document.documentElement.setAttribute("data-theme-setting", themeSetting);
+
+  // HARDCODE DARK MODE
+  document.documentElement.setAttribute("data-theme-setting", "dark");
 
   applyTheme();
 };
@@ -206,13 +209,7 @@ let transTheme = () => {
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light") {
-    // Since im removing the system theme option, I've decided here that the default
-    // theme setting on initial page load, or browser cache reset, will be dark.
-    themeSetting = "dark";
-  }
-  return themeSetting;
+  return "dark";
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
@@ -240,9 +237,11 @@ let initTheme = () => {
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
+    if (mode_toggle) {
+      mode_toggle.addEventListener("click", function () {
+        toggleThemeSetting();
+      });
+    }
 
   });
 
