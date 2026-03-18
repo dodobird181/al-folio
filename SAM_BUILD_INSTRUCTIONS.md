@@ -6,5 +6,16 @@
 4. `sudo rm -r latest_build`
 5. `sudo docker compose cp jekyll:/srv/jekyll/_site latest_build/`
 
-Or, if the container is already running:
-`sudo docker compose exec -it jekyll bundle exec jekyll build && sudo rm -r latest_build && sudo docker compose cp jekyll:/srv/jekyll/_site latest_build/ && sudo chown -R dodo ~/Documents/github/al-folio && git add . && git commit -m "deploy" && git push`
+Or, if the container is already running you can use this complete deployment script:
+WARNING: THIS WILL COMMIT ALL CHANGES (it does so on purpose because jekyll builds from the current app state anyways).
+```
+sudo docker compose exec -it jekyll bundle exec jekyll build && \
+sudo rm -r latest_build && \
+sudo docker compose cp jekyll:/srv/jekyll/_site latest_build/ && \
+sudo chown -R dodo ~/Documents/github/al-folio && \
+git add . && \
+git commit -m "Deploy latest build" && \
+git push && \
+chmod +x send_deploy_webhook.sh && \
+./send_deploy_webhook.sh
+```
