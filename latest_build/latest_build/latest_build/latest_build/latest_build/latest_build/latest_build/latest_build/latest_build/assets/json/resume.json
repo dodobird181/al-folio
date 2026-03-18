@@ -1,0 +1,127 @@
+{
+  "about": {
+    "name": "Samuel Jack Morris",
+    "email": "Dodobird181@gmail.com",
+    "phone": "(250) 508-6292",
+    "summary": "Experienced software developer specializing in backend development, distributed systems, and game development. Strong background in Python, Java, C#, and JavaScript.",
+    "location": {
+      "city": "Montréal",
+      "region": "Québec",
+      "countryCode": "CA"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "dodobird181",
+        "url": "https://github.com/dodobird181"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "smorris-profile",
+        "url": "https://linkedin.com/in/smorris-profile"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "NatuR&D",
+      "position": "Lead Backend Developer",
+      "location": "Victoria, BC, (Remote)",
+      "startDate": "2024-08-01",
+      "summary": "Python & TypeScript developer at the Resilient Urban Systems and Habitat (RUSH) Initiative, responsible for developing and maintaining our backend infrastructure.",
+      "highlights": [
+        "Performed high-level requirements design, project planning, and technical progress updates with key project stakeholders.",
+        "Developed an interactive web application for uploading, previewing, styling, and reviewing GeoJSON map data that integrates with our application frontend."
+      ]
+    },
+    {
+      "name": "Emburse Inc.",
+      "position": "Level 2 Software Developer",
+      "location": "Montréal, Québec",
+      "startDate": "2022-08-02",
+      "endDate": "2025-05-30",
+      "summary": "Full-stack Python developer for the Emburse Cards Django web app, responsible for implementing new features, addressing technical debt, participating in on-call rotations, performing deployments, writing unit and integration tests, planning projects, responding to emergencies, and performing code-reviews.",
+      "highlights": [
+        "Contributed over 85% of the work on an urgent security project to protect our application against fraudulent activity by using two-factor authentication and monitoring user login activity.",
+        "Led a certification process where I was the sole representative for my team in calls with Apple and Stripe that involved performing various actions on our backend at the request of a third-party tester.",
+        "Independently planned a Jira epic to migrate away from “public key” authentication in our Plaid Inc. integration.",
+        "Created an internal tool for exporting foreign exchange and cross border fees for our clients, and a cron job for charging them at the end of their pay periods.",
+        "Achieved a promotion from Level 1 to Level 2 software engineer."
+      ]
+    },
+    {
+      "name": "SKYTRAC Systems Ltd.",
+      "position": "Junior Software Developer",
+      "location": "Victoria, BC, (Hybrid)",
+      "startDate": "2021-05-01",
+      "endDate": "2021-09-01",
+      "summary": "Backend Java and C# developer responsible for migrating mission critical repositories out of a legacy mono-repo. Developed a Java application for scheduling and sending customer emails.",
+      "highlights": [
+        "Spearheaded the development of a new Java application for scheduling, packaging, and sending emails to customers based on their account's notification settings",
+        "Created CI/CD pipelines, Docker images, and unit-tests to streamline application deployment."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "McGill University",
+      "area": "Cognitive Science",
+      "studyType": "Bachelor of Arts and Science (Honours)",
+      "location": "Montréal, Québec",
+      "startDate": "2018-09-01",
+      "endDate": "2022-05-01",
+      "gpa": "3.55/4.00"
+    },
+    {
+      "institution": "McGill University",
+      "area": "Computer Science",
+      "studyType": "Minor",
+      "location": "Montréal, Québec",
+      "startDate": "2018-09-01",
+      "endDate": "2022-05-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "Java", "C#", "JavaScript", "SQL", "HTML", "CSS", "OCaml"]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "keywords": ["Django", "Flask", "Asyncio", "Matplotlib", "NumPy", "Pandas", "PyGame"]
+    },
+    {
+      "name": "Tools & Technologies",
+      "keywords": [
+        "InteractiveBrokers",
+        "OpenAI",
+        "OpenTelemetry",
+        "Plaid",
+        "Poetry",
+        "Stripe",
+        "Bash",
+        "CodeFresh",
+        "Coralogix",
+        "Docker",
+        "GitLab",
+        "PostgreSQL",
+        "MySQL Workbench",
+        "Postman",
+        "Kubectl",
+        "Git",
+        "Jira",
+        "Confluence",
+        "Zendesk",
+        "Okta"
+      ]
+    },
+    {
+      "name": "Java-Specific",
+      "keywords": ["Object-Oriented Design", "Design Patterns", "JUnit", "JAX-RS", "Mockito"]
+    },
+    {
+      "name": "C#-Specific",
+      "keywords": ["Unity"]
+    }
+  ]
+}
