@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -413,6 +413,11 @@ ninja.data = [{
           description: "A chatbot engineered to only respond with truthful information about me.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sambot_project/";
+            },},{id: "projects-samdash",
+          title: 'Samdash',
+          description: "My personal online dashboard with stock-market and news information.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/samdash_project/";
             },},{
         id: 'social-github',
         title: 'GitHub',
