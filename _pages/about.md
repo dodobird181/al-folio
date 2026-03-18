@@ -8,7 +8,7 @@ subtitle: A programmer who believes in the capacity of well-written software to 
 
 profile:
   align: right
-  image: darbar_pic_cropped.png
+  image: darbar_pic_cropped.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Dodobird181@gmail.com</p>
