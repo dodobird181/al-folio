@@ -1,3 +1,5 @@
+!/usr/bin/bash
+
 BODY='{}'
 TIMESTAMP=$(date +%s)
 SECRET="$MN_SERVER_DEPLOY_SECRET"
