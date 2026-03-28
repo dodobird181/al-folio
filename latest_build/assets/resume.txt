@@ -1,0 +1,50 @@
+Samuel Jack Morris
+GitHub: https://github.com/dodobird181
+LinkedIn: https://linkedin.com/in/smorris-profile
+Contact: Dodobird181@gmail.com • (250) 508-6292
+
+EXPERIENCE​
+The Resilient Urban Systems & Habitat Initiative, Montréal, Québec​
+May 2025 – Present
+Lead Backend Developer, Remote
+• Single-handedly created a Django web-application for uploading, styling, and describing geographic data in a variety
+of formats.
+• Trained, managed, and supervised a team of volunteer programmers as part of our partnership with Data For Good.
+Used Linear to create tasks and monitor individual progress. Helped volunteers navigate difficult tasks and
+configure their development environments.
+• Responsible for building and maintaining all backend infrastructure, representing RUSH in inter-company meetings,
+and planning technical projects on our roadmap while considering key stakeholders.
+• Built a custom CI/CD pipeline for automated unit-testing and deployment, as well as an automated backup
+management system using Rclone and Backblaze.​
+Emburse Inc., Montréal, Québec​
+August 2022 – May 2025
+Level 2 Software Developer, Remote
+• Full-stack Python developer for the Emburse Cards Django web app, responsible for implementing new features,
+addressing technical debt, participating in on-call rotations, running deployments, writing unit and integration tests,
+planning projects, responding to on-call emergencies, and performing code-reviews.
+• Contributed over 85% of the work on an urgent security project to protect our application against fraudulent activity
+by using two-factor authentication and monitoring user login activity.
+• Led a certification process where I was the sole representative for my team in calls with Apple and Stripe that
+involved performing various actions on our backend at the request of a third-party tester.
+• Created an internal tool for exporting foreign exchange and cross border fees for our clients, and a cron job for
+charging them at the end of their pay periods.
+SKYTRAC Systems Ltd., Montréal, Québec​
+May – September 2021
+Junior Software Developer Internship, Remote
+• Spearheaded the development of a new Java application for scheduling, packaging, and sending emails to customers
+based on their account’s notification settings.
+• Created CI/CD pipelines, Docker images, and unit-tests to streamline application deployment.
+
+EDUCATION​
+McGill University, Montréal, Québec​
+September 2018 – May 2022​
+Bachelor of Arts and Science (B.A. & Sc.) Honours Cognitive Science, Bachelor of Arts, Minor Computer Science. ​
+• CGPA 3.55/4.00. Graduated with First Class Honours in May 2022.
+
+SKILLS​
+Python: Asyncio, Django, Flask, InteractiveBrokers, Matplotlib, NumPy, OpenAI, OpenTelemetry, Pandas, Plaid, Poetry,
+Py4J, PyGame, Stripe. Infrastructure: Bash, CodeFresh, Coralogix, Docker, GitLab, PostgreSQL, MySQL Workbench,
+Postman, Kubectl. Workflow: Git, Jira, Confluence, Zendesk, Okta. Java: OOD, Design Patterns, JUnit, JAX-RS, Mockito.
+C#: Unity. Other Languages: JavaScript, SQL, HTML, CSS, OCaml.
+
+

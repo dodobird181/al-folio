@@ -9,8 +9,9 @@
 Or, if the container is already running you can use this complete deployment script:
 WARNING: THIS WILL COMMIT ALL CHANGES (it does so on purpose because jekyll builds from the current app state anyways).
 ```
+sudo rm -r latest_build || true \
+pdftotext assets/pdf/resume.pdf assets/resume.txt \
 sudo docker compose exec -it jekyll bundle exec jekyll build && \
-sudo rm -r latest_build && \
 sudo docker compose cp jekyll:/srv/jekyll/_site latest_build/ && \
 sudo chown -R dodo ~/Documents/github/al-folio && \
 git add . && \
